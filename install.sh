@@ -4,7 +4,7 @@
 # Artiom Lichtenstein
 # v1.0.1, 24/11/2017
 
-tmsh create ilx workspace ilxws_SLACK_BOT from-uri https://raw.githubusercontent.com/ArtiomL/f5-slack-bot/master/bin/ilxws.tgz > /dev/null 2>&1
+tmsh create ilx workspace ilxws_SLACK_BOT from-uri https://raw.githubusercontent.com/madrid1164/f5/master/ilxws.tgz > /dev/null 2>&1
 read -s -p "Enter Slack API Token: " str_AToken
 echo
 sed -i "s/|| ''/|| '$str_AToken'/" /var/ilx/workspaces/Common/ilxws_SLACK_BOT/extensions/ilxex_SLACK_BOT/index.js
